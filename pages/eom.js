@@ -1,8 +1,8 @@
-import React from 'react'
 import styles from '../styles/EOM.module.css'
 
+// path: /eom
 const EOM = ({ employee }) => {
-  console.log(employee)
+  // console.log(employee)
   return (
     <div className='page-container'>
       <div className={styles.main}>
@@ -30,6 +30,9 @@ export const getServerSideProps = async pageContext => {
     props: { employee: data }
   }
 }
+
+export default EOM
+
 // https://github.com/portexe/next-news/blob/master/db.json
 /*
 {
@@ -39,4 +42,3 @@ export const getServerSideProps = async pageContext => {
   "description": "Dev guy and tutorialist"
 }
 */
-export default EOM

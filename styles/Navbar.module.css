@@ -4,10 +4,10 @@
   display: flex;
   justify-content: center;
 }
-.main div {
+.main a {
   margin: 25px;
   cursor: pointer;
 }
-.main div:hover {
+.main a:hover {
   color: rgb(168, 168, 168);
 }

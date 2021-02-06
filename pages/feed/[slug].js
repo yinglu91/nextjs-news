@@ -1,7 +1,7 @@
 import styles from '../../styles/Feed.module.css'
 import { useRouter } from 'next/router'
 
-// slug
+// path: /feed/1
 const Feed = ({ pageNumber, articles }) => {
   const router = useRouter()
 
@@ -19,6 +19,7 @@ const Feed = ({ pageNumber, articles }) => {
 
   return (
     <div>
+      {/* News */}
       <div className={styles.main}>
         {articles.map((article, index) => (
           <div key={index} className={styles.post}>
@@ -31,6 +32,8 @@ const Feed = ({ pageNumber, articles }) => {
         ))}
       </div>
 
+      {/* paginator */}
+
       <div className={styles.paginator}>
         <div onClick={onPrePageClick} className={pageNumber == 1 ? styles.disabled : styles.active}>
           Previous Page
@@ -42,7 +45,6 @@ const Feed = ({ pageNumber, articles }) => {
           Next Page
         </div>
       </div>
-      
     </div>
   )
 }
