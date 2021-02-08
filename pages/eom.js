@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styles from '../styles/EOM.module.css'
 
 // path: /eom
@@ -11,7 +12,13 @@ const EOM = ({ employee }) => {
         <div className={styles.employeeOfTheMonth}>
           <h3>{employee.name}</h3>
           <h6>{employee.position}</h6>
-          <img src={employee.image} alt="" />
+          
+          <Image
+            src={employee.image}
+            alt={`Picture of the ${employee.name}`}
+            width={250}
+            height={250}
+          />
           
           <p>{employee.description}</p>
         </div>
