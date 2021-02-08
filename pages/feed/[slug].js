@@ -49,8 +49,8 @@ const Feed = ({ pageNumber, articles }) => {
   )
 }
 
-export const getServerSideProps = async pageContext => {
-  const pageNumber = pageContext.query.slug;
+export const getServerSideProps = async (context) => {
+  const pageNumber = context.query.slug;
 
   if (!pageNumber || pageNumber < 1 || pageNumber > 5) {
     return {
